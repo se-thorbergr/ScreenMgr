@@ -3,6 +3,10 @@
     <!-- MDK² role: Mixin (sources are merged into PB at pack time) -->
     <Mdk2ProjectType>mdk2mixin</Mdk2ProjectType>
 
+    <!-- Do not produce assembly attributes or compile output for mixins -->
+    <!-- <GenerateAssemblyInfo>false</GenerateAssemblyInfo> -->
+    <!-- <SkipCompilerExecution>true</SkipCompilerExecution> -->
+
     <!-- All standard knobs (TargetFramework, LangVersion, RootNamespace, etc.)
          are inherited from the repo's Directory.Build.props -->
   </PropertyGroup>
@@ -15,7 +19,9 @@
     <PackageReference Include="Mal.Mdk2.References" Version="2.2.4" />
   </ItemGroup>
 
+  <!--
   <ItemGroup>
     <ProjectReference Include="..\..\VIOS.Core\VIOS.Core.csproj" />
   </ItemGroup>
+  -->
 </Project>
