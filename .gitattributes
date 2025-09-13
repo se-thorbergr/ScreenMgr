@@ -1,47 +1,54 @@
-# Default: normalize to LF in repo
-*               text=auto eol=lf
+# Default: normalize to LF in repo; let tooling decide on checkout unless overridden below
+*           text=auto eol=lf working-tree-encoding=UTF-8
 
-# Windows-only text that should stay CRLF on checkout (rare in mixins, but safe)
-*.sln           text eol=crlf
-*.bat           text eol=crlf
-*.cmd           text eol=crlf
+# Windows-only text that should stay CRLF on checkout
+*.sln       text eol=crlf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
 
-# Scripts & code (LF)
-*.ps1           text eol=lf
-*.sh            text eol=lf
-*.cs            text eol=lf
-*.csproj        text eol=lf
-*.props         text eol=lf
-*.targets       text eol=lf
+# Scripts & code (LF is safest across OS/CI)
+*.ps1       text eol=lf working-tree-encoding=UTF-8
+*.sh        text eol=lf working-tree-encoding=UTF-8
+*.cs        text eol=lf working-tree-encoding=UTF-8
+*.csproj    text eol=lf working-tree-encoding=UTF-8
+*.projitems text eol=lf working-tree-encoding=UTF-8
+*.shproj    text eol=lf working-tree-encoding=UTF-8
+*.props     text eol=lf working-tree-encoding=UTF-8
+*.targets   text eol=lf working-tree-encoding=UTF-8
+*.fs        text eol=lf working-tree-encoding=UTF-8
+*.vb        text eol=lf working-tree-encoding=UTF-8
 
 # Config & metadata (LF)
-*.editorconfig  text eol=lf
-*.gitattributes text eol=lf
-*.gitmodules    text eol=lf
-*.md            text eol=lf
-*.txt           text eol=lf
-*.xml           text eol=lf
-*.json          text eol=lf
-*.yml           text eol=lf
-*.yaml          text eol=lf
-*.ini           text eol=lf
+*.editorconfig text eol=lf working-tree-encoding=UTF-8
+*.gitattributes text eol=lf working-tree-encoding=UTF-8
+*.gitmodules   text eol=lf working-tree-encoding=UTF-8
+*.md          text eol=lf working-tree-encoding=UTF-8
+*.txt         text eol=lf working-tree-encoding=UTF-8
+*.xml         text eol=lf working-tree-encoding=UTF-8
+*.json        text eol=lf working-tree-encoding=UTF-8
+*.yml         text eol=lf working-tree-encoding=UTF-8
+*.yaml        text eol=lf working-tree-encoding=UTF-8
+*.ini         text eol=lf working-tree-encoding=UTF-8
 
 # Web/assets (LF text; mark binaries)
-*.svg           text eol=lf
-*.css           text eol=lf
-*.js            text eol=lf
+*.svg        text eol=lf working-tree-encoding=UTF-8
+*.css        text eol=lf working-tree-encoding=UTF-8
+*.js         text eol=lf working-tree-encoding=UTF-8
 
 # Binary files (never modify line endings)
-*.png           -text
-*.jpg           -text
-*.jpeg          -text
-*.gif           -text
-*.ico           -text
-*.zip           -text
-*.7z            -text
-*.pdf           -text
-*.dll           -text
-*.exe           -text
+*.png        -text
+*.jpg        -text
+*.jpeg       -text
+*.gif        -text
+*.ico        -text
+*.zip        -text
+*.7z         -text
+*.pdf        -text
+*.dll        -text
+*.exe        -text
 
 # Mermaid source (text)
-*.mmd           text eol=lf
+*.mmd        text eol=lf working-tree-encoding=UTF-8
+
+# Space Engineers thumbnails in script projects
+thumb.png    -text
