@@ -3,6 +3,8 @@ bin/
 obj/
 # VSCode
 .vscode/
+# Visual Studio
+.vs/
 # Rider
 .idea/
 
@@ -16,3 +18,4 @@ ehthumbs.db
 *.tmp
 ~$*
 *~
+*.backup-*

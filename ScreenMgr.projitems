@@ -8,7 +8,7 @@
   <ItemGroup>
     <!-- pull in every .cs file recursively -->
     <Compile Include="$(MSBuildThisFileDirectory)**\*.cs" />
-    <!-- (optional) include docs or assets as None -->
+    <!-- (optional) include docs as None; keep small -->
     <None Include="$(MSBuildThisFileDirectory)**\*.md" />
   </ItemGroup>
 </Project>
